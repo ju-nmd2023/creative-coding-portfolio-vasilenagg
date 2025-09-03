@@ -20,7 +20,7 @@ function flower() {
       rect(x, y, 20, 15);
 
       fill(168, 168, 57);
-      ellipse(x, y, 3);
+      rect(x, y, 3);
 
       rotate(PI / 7);
     }
@@ -28,6 +28,10 @@ function flower() {
 }
 
 function draw() {
+  fill(189, 157, 19);
+  noStroke();
+  rect(0, 600, 800, 300);
+
   let y = (height - flowerSize * amount - gap * (amount - 2)) / 2;
   for (i = 0; i < amount; i++) {
     let x = (width - flowerSize * amount - gap * (amount - 4)) / 2;
