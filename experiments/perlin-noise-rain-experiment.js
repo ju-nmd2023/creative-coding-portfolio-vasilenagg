@@ -4,16 +4,16 @@ function setup() {
 }
 
 const size = 10;
-const divider = 50;
-const numRows = 60;
-const numCols = 60;
+const divider = 4;
+const numRows = innerWidth;
+const numCols = innerHeight;
 
 let counter = 0;
 
 function draw() {
-  background(255, 255, 255);
-  noStroke();
-  fill(0, 0, 0);
+  background(121, 138, 166);
+  stroke(184, 197, 247, 0.8);
+  fill(184, 197, 217);
 
   //noiseSeed(0);
   for (let y = 0; y < numRows; y++) {
@@ -23,5 +23,5 @@ function draw() {
     }
   }
 
-  counter += 0.3;
+  counter += 1;
 }
