@@ -1,19 +1,23 @@
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(innerWidth, innerHeight);
 }
+
+const size = 10;
+const divider = 50;
+const numRows = 60;
+const numCols = 60;
 
 function draw() {
   background(255, 255, 255);
+  noStroke();
+  fill(0, 0, 0);
 
-  const originalY = 300;
-  const divider = 60;
-  noiseSeed(0);
-  beginShape();
-  for (let x = 0; x < 600; x++) {
-    const y = originalY + noise(x / divider) * 100;
-    vertex(x, y);
+  //noiseSeed(0);
+  for (let y = 0; y < numRows; y++) {
+    for (let x = 0; x < numCols; x++) {
+      const value = noise(x / divider, y / divider) * size;
+      ellipse(size / 2 + x * size, size / 2 + y * size, value);
+    }
   }
-  endShape();
-
   noLoop();
 }
