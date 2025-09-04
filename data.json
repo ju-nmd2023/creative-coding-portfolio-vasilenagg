@@ -1,7 +1,12 @@
 [
   {
     "file": "experiments/perlin-noise-rain-experiment.js",
-    "name": "Rainy perlin noise",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "name": "Rainy Perlin Noise",
+    "description": "For this work, during the rainy days in Jönköping I got inspired by the raindrops getting bigger and smaller through following a trail on my window. I coded it as an experiment based on the Perlin Noise example from Garrit on Canvas."
+  },
+  {
+    "file": "experiments/gradient-experiment-perlin-noise.js",
+    "name": "Purple 'heatmap' Perlin Noise",
+    "description": "This variation was inspired by complementary graphics of the 'Sour' album by Olivia Rodrigo. I coded it as an experiment based on the Perlin Noise example from Garrit on Canvas."
   }
 ]
