@@ -47,6 +47,16 @@ function draw() {
   noStroke();
   rect(0, 600, 800, 300);
 
+  fill(182, 141, 30);
+  stroke(116, 82, 21);
+  strokeWeight(0.4);
+  rect(280, 500, 180, 200, 50, 50, 110, 70);
+
+  fill(185, 161, 111);
+  stroke(116, 82, 21);
+  strokeWeight(0.4);
+  rect(275, 600, 190, 200, 40, 40, 70, 70);
+
   let y = innerHeight / 2;
   for (i = 0; i < amount; i++) {
     let x = innerWidth / 2;
