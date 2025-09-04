@@ -30,7 +30,6 @@ function flower() {
 function draw() {
   fill(189, 157, 19);
   noStroke();
-  rect(0, 600, 800, 300);
 
   let y = (height - flowerSize * amount - gap * (amount - 2)) / 2;
   for (i = 0; i < amount; i++) {

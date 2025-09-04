@@ -15,7 +15,6 @@ function draw() {
   stroke(184, 197, 247, 0.8);
   fill(184, 197, 217);
 
-  //noiseSeed(0);
   for (let y = 0; y < numRows; y++) {
     for (let x = 0; x < numCols; x++) {
       const value = noise(x / divider, y / divider, counter) * size;
