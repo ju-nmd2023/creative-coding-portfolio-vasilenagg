@@ -1,6 +1,18 @@
 function setup() {
   createCanvas(innerWidth, innerHeight);
   background(217, 175, 50);
+
+  stroke(94, 104, 0);
+  strokeWeight(5);
+  line(248, 218, 382, 775);
+  line(248, 303, 382, 775);
+  line(248, 393, 382, 775);
+  line(360, 209, 382, 775);
+  line(340, 209, 382, 775);
+  line(370, 209, 382, 775);
+  line(482, 209, 382, 775);
+  line(492, 309, 382, 775);
+  line(482, 399, 382, 775);
 }
 
 let flowerSize = 50;
