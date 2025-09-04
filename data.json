@@ -8,5 +8,20 @@
     "file": "experiments/gradient-experiment-perlin-noise.js",
     "name": "Purple 'heatmap' Perlin Noise",
     "description": "This variation was inspired by complementary graphics of the 'Sour' album by Olivia Rodrigo. I coded it as an experiment based on the Perlin Noise example from Garrit on Canvas."
+  },
+  {
+    "file": "experiments/sunflower-experiment.js",
+    "name": "Van Gogh Sunflowers",
+    "description": "For these flowers, I got inspired by the painting Sunflowers by Van Gogh but I focused solely on the flowers. I coded it as an experiment based on the flower example that we live coded with Bassima during a lecture."
+  },
+  {
+    "file": "experiments/moving-flowers-try.js",
+    "name": "Van Gogh Sunflowers",
+    "description": "For these flowers, I got inspired by the painting Sunflowers by Van Gogh, but also focused on distorted forms which were a main characteristic of the Post-Impressionist movement that the artist was a part of. I coded it as an experiment based on the flower example that we live coded with Bassima during a lecture and used help from the p5 referencing for the movement."
+  },
+  {
+    "file": "experiments/sunflower-further-experiment.js",
+    "name": "Van Gogh Sunflowers",
+    "description": "For this work, I got inspired by the painting Sunflowers by Van Gogh and built upon the initial flower experiment, adding stems, a vase, and more details such as additional petals, table, etc. I coded it as an experiment based on the flower example that we live coded with Bassima during a lecture."
   }
 ]

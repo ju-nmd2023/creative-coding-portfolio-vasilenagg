@@ -30,7 +30,12 @@ function flower() {
 function draw() {
   fill(189, 157, 19);
   noStroke();
+  // Code borrowed from a website - BEGIN
+  //Source: noise. (n.d.). https://p5js.org/reference/p5/noise/
+  let u = 100 * noise(0.005 * frameCount);
+  let v = 100 * noise(0.005 * frameCount + 10000);
 
+  //noiseSeed(0);
   let y = (height - flowerSize * amount - gap * (amount - 1)) / 2;
   for (i = 0; i < amount; i++) {
     let x = (width - flowerSize * amount - gap * (amount - 1)) / 2;
@@ -39,8 +44,9 @@ function draw() {
       translate(x, y);
       flower();
       pop();
-      x += flowerSize + gap;
+      x += flowerSize + gap + u * 0.1;
     }
-    y += flowerSize + gap;
+    y += flowerSize + gap + v * 0.1;
   }
+  // Code borrowed from a website - END
 }

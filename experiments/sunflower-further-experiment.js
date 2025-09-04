@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(innerWidth, innerHeight);
+  createCanvas(700, 800);
   background(217, 175, 50);
 
   stroke(94, 104, 0);
@@ -50,16 +50,16 @@ function draw() {
   fill(182, 141, 30);
   stroke(116, 82, 21);
   strokeWeight(0.4);
-  rect(280, 500, 180, 200, 50, 50, 110, 70);
+  rect(280, 500, 180, 200, 50, 50, 110, 95);
 
   fill(185, 161, 111);
   stroke(116, 82, 21);
   strokeWeight(0.4);
-  rect(275, 600, 190, 200, 40, 40, 70, 70);
+  rect(275, 600, 190, 200, 40, 40, 100, 95);
 
-  let y = innerHeight / 2;
+  let y = height / 2;
   for (i = 0; i < amount; i++) {
-    let x = innerWidth / 2;
+    let x = width / 2 + 30;
     for (let j = 0; j < amount; j++) {
       push();
       translate(x / 1.5, y / 2);
