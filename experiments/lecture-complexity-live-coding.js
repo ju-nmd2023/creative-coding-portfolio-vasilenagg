@@ -7,6 +7,8 @@ function setup() {
   position = createVector(100, 100);
   velocity = createVector(5, 8);
   background(255);
+
+  colorMode(HSB);
 }
 
 function draw() {
@@ -14,14 +16,14 @@ function draw() {
 
   push();
   fill(15, random(255), 100);
-  ellipse(position.x, position.y, random(60));
-  ellipse(width - position.x, height - position.y, random(60));
+  ellipse(position.x, position.y, random(6));
+  ellipse(width - position.x, height - position.y, random(6));
   pop();
 
   push();
   fill(80, random(255), 200);
-  ellipse(position.x, height - position.y, random(60));
-  ellipse(width - position.x, position.y, random(60));
+  ellipse(position.x, height - position.y, random(6));
+  ellipse(width - position.x, position.y, random(6));
   pop();
 
   if (position.x > width || position.x < 0) {
