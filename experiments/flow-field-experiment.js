@@ -48,7 +48,7 @@ class Agent {
 
   draw() {
     push();
-    stroke(random(10, 119), random(106, 160), random(0, 0.2));
+    stroke(random(10, 119), random(106, 160), random(0, 200));
     strokeWeight(0.3);
     rect(this.lastPosition.x - 3, this.lastPosition.y - 3, 2, 3);
     pop();
