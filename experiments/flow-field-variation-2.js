@@ -29,12 +29,12 @@ class Agent {
   }
 
   checkBorders() {
-    if (this.position.x < 0) {
+    if (this.position.x < 200) {
       this.position.x = innerWidth;
       this.lastPosition.x = innerWidth;
     } else if (this.position.x > innerWidth) {
       this.position.x = 0;
-      this.lastPosition.x = 0;
+      this.lastPosition.x = 200;
     }
     if (this.position.y < 0) {
       this.position.y = innerHeight;
@@ -49,21 +49,24 @@ class Agent {
     push();
     stroke(random(10, 119), random(106, 160), random(0, 200));
     strokeWeight(0.3);
-    rect(this.lastPosition.x - 1, this.lastPosition.y - 1, 2, 3);
+    rect(this.lastPosition.x - 1, this.lastPosition.y - 1, 20, 30);
     pop();
   }
 }
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
+  angleMode(DEGREES);
   background(255, 255, 255);
+
   field = generateField();
+
   generateAgents();
 }
 
 function generateField() {
   let field = [];
-  noiseSeed(Math.random() * 100);
+  noiseSeed(Math.random() * 200);
   for (let x = 0; x < maxCols; x++) {
     field.push([]);
     for (let y = 0; y < maxRows; y++) {
@@ -94,6 +97,9 @@ let field;
 let agents = [];
 
 function draw() {
+  //rotate(90);
+  //translate(0, -width);
+
   for (let agent of agents) {
     const x = Math.floor(agent.position.x / fieldSize);
     const y = Math.floor(agent.position.y / fieldSize);

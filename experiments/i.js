@@ -22,10 +22,11 @@ class Agent {
 
   update() {
     this.lastPosition = this.position.copy();
+
     this.velocity.add(this.acceleration);
     this.velocity.limit(this.maxSpeed);
     this.position.add(this.velocity);
-    this.acceleration.mult(0.2);
+    this.acceleration.mult(0);
   }
 
   checkBorders() {
@@ -47,9 +48,14 @@ class Agent {
 
   draw() {
     push();
-    stroke(random(10, 119), random(106, 160), random(0, 200));
-    strokeWeight(0.3);
-    rect(this.lastPosition.x - 1, this.lastPosition.y - 1, 2, 3);
+    stroke(0, 0, 0, 40);
+    strokeWeight(1);
+    line(
+      this.lastPosition.x,
+      this.lastPosition.y,
+      this.position.x,
+      this.position.y
+    );
     pop();
   }
 }
@@ -67,7 +73,7 @@ function generateField() {
   for (let x = 0; x < maxCols; x++) {
     field.push([]);
     for (let y = 0; y < maxRows; y++) {
-      const value = noise(x / divider, y / divider) * Math.PI * 1.2;
+      const value = noise(x / divider, y / divider) * Math.PI * 2;
       field[x].push(p5.Vector.fromAngle(value));
     }
   }
@@ -75,12 +81,12 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 320; i++) {
+  for (let i = 0; i < 200; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
-      8,
-      0.3
+      4,
+      0.1
     );
     agents.push(agent);
   }
@@ -89,7 +95,7 @@ function generateAgents() {
 const fieldSize = 50;
 const maxCols = Math.ceil(innerWidth / fieldSize);
 const maxRows = Math.ceil(innerHeight / fieldSize);
-const divider = 2;
+const divider = 40;
 let field;
 let agents = [];
 
