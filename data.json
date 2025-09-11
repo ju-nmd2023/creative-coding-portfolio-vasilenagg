@@ -41,7 +41,7 @@
   },
   {
     "file": "experiments/flow-field-variation-3.js",
-    "name": "Flow Field Human Veins (tree)",
-    "description": "For this work, I built upon the"
+    "name": "DIY flow field",
+    "description": "For this work, I built upon the Veins(tree) variation. Enter your mouse on the field and see the magic."
   }
 ]
