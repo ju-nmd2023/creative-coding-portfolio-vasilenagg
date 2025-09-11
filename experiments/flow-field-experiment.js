@@ -49,8 +49,8 @@ class Agent {
   draw() {
     push();
     stroke(random(10, 119), random(106, 160), random(0, 0.2));
-    strokeWeight(1);
-    rect(this.lastPosition.x - 5, this.lastPosition.y - 5, 1, 2);
+    strokeWeight(0.3);
+    rect(this.lastPosition.x - 3, this.lastPosition.y - 3, 2, 3);
     pop();
   }
 }
@@ -76,7 +76,7 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 120; i++) {
+  for (let i = 0; i < 320; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
@@ -90,7 +90,7 @@ function generateAgents() {
 const fieldSize = 50;
 const maxCols = Math.ceil(innerWidth / fieldSize);
 const maxRows = Math.ceil(innerHeight / fieldSize);
-const divider = 4;
+const divider = 2;
 let field;
 let agents = [];
 
