@@ -45,7 +45,9 @@ class Agent {
     }
   }
 
-  //code from https://p5js.org/reference/p5/random/
+  // Code borrowed from a website - BEGIN
+  //Source: random. (n.d.). https://p5js.org/reference/p5/random/
+
   draw() {
     let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
@@ -54,8 +56,7 @@ class Agent {
     fill(113, 219, 103);
     text(randomNumber, this.lastPosition.x - 1, this.lastPosition.y);
   }
-
-  // end of code from https://p5js.org/reference/p5/random/
+  // Code borrowed from a website - END
 }
 
 function setup() {
