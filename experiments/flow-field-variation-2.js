@@ -25,7 +25,7 @@ class Agent {
     this.velocity.add(this.acceleration);
     this.velocity.limit(this.maxSpeed);
     this.position.add(this.velocity);
-    this.acceleration.mult(0.2);
+    this.acceleration.mult(0.1);
   }
 
   checkBorders() {
@@ -33,23 +33,23 @@ class Agent {
       this.position.x = innerWidth;
       this.lastPosition.x = innerWidth;
     } else if (this.position.x > innerWidth) {
-      this.position.x = 0;
+      this.position.x = 200;
       this.lastPosition.x = 200;
     }
-    if (this.position.y < 0) {
+    if (this.position.y < 200) {
       this.position.y = innerHeight;
       this.lastPosition.y = innerHeight;
     } else if (this.position.y > innerHeight) {
-      this.position.y = 0;
-      this.lastPosition.y = 0;
+      this.position.y = 200;
+      this.lastPosition.y = 200;
     }
   }
 
   draw() {
     push();
-    stroke(random(10, 119), random(106, 160), random(0, 200));
-    strokeWeight(0.3);
-    rect(this.lastPosition.x - 1, this.lastPosition.y - 1, 20, 30);
+    fill(62, 25, 89);
+    noStroke();
+    circle(this.lastPosition.x - 1, this.lastPosition.y - 1, 2);
     pop();
   }
 }
@@ -57,7 +57,7 @@ class Agent {
 function setup() {
   createCanvas(innerWidth, innerHeight);
   angleMode(DEGREES);
-  background(255, 255, 255);
+  background(199, 111, 156);
 
   field = generateField();
 
@@ -66,11 +66,11 @@ function setup() {
 
 function generateField() {
   let field = [];
-  noiseSeed(Math.random() * 200);
+  noiseSeed(Math.random() * 10);
   for (let x = 0; x < maxCols; x++) {
     field.push([]);
     for (let y = 0; y < maxRows; y++) {
-      const value = noise(x / divider, y / divider) * Math.PI * 1.2;
+      const value = noise(x / divider, y / divider) * Math.PI * 7;
       field[x].push(p5.Vector.fromAngle(value));
     }
   }
@@ -78,12 +78,12 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 320; i++) {
+  for (let i = 0; i < 120; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
-      8,
-      0.3
+      30,
+      0.1
     );
     agents.push(agent);
   }
@@ -97,8 +97,8 @@ let field;
 let agents = [];
 
 function draw() {
-  //rotate(90);
-  //translate(0, -width);
+  rotate(90);
+  translate(0, -width);
 
   for (let agent of agents) {
     const x = Math.floor(agent.position.x / fieldSize);
