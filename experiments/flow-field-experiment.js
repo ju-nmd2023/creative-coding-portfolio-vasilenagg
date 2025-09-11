@@ -48,9 +48,9 @@ class Agent {
 
   draw() {
     push();
-    stroke(0, 0, 0, 40);
+    stroke(random(10, 119), random(106, 160), random(0, 0.2));
     strokeWeight(1);
-    rect(this.lastPosition.x - 5, this.lastPosition.y - 5, 2, 2);
+    rect(this.lastPosition.x - 5, this.lastPosition.y - 5, 1, 2);
     pop();
   }
 }
@@ -68,7 +68,7 @@ function generateField() {
   for (let x = 0; x < maxCols; x++) {
     field.push([]);
     for (let y = 0; y < maxRows; y++) {
-      const value = noise(x / divider, y / divider) * Math.PI * 2;
+      const value = noise(x / divider, y / divider) * Math.PI * 1.2;
       field[x].push(p5.Vector.fromAngle(value));
     }
   }
@@ -76,12 +76,12 @@ function generateField() {
 }
 
 function generateAgents() {
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < 120; i++) {
     let agent = new Agent(
       Math.random() * innerWidth,
       Math.random() * innerHeight,
-      4,
-      0.1
+      8,
+      0.3
     );
     agents.push(agent);
   }
