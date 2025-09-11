@@ -29,27 +29,33 @@ class Agent {
   }
 
   checkBorders() {
-    if (this.position.x < 100) {
+    if (this.position.x < 0) {
       this.position.x = innerWidth;
       this.lastPosition.x = innerWidth;
-    } else if (this.position.x > innerWidth - 100) {
-      this.position.x = 100;
-      this.lastPosition.x = 100;
+    } else if (this.position.x > innerWidth) {
+      this.position.x = 0;
+      this.lastPosition.x = 0;
     }
-    if (this.position.y < 100) {
+    if (this.position.y < 0) {
       this.position.y = innerHeight;
       this.lastPosition.y = innerHeight;
-    } else if (this.position.y > innerHeight - 100) {
-      this.position.y = 100;
-      this.lastPosition.y = 100;
+    } else if (this.position.y > innerHeight - 0) {
+      this.position.y = 0;
+      this.lastPosition.y = 0;
     }
   }
 
   draw() {
     push();
-    fill(62, 25, 89, random(40, 255));
-    noStroke();
-    circle(this.lastPosition.x - 1, this.lastPosition.y - 1, 5);
+    strokeWeight(0.5);
+
+    stroke(random(40, 255), 133, 102, random(40, 255));
+    line(
+      this.lastPosition.x,
+      this.lastPosition.y,
+      this.position.x,
+      this.position.y
+    );
     pop();
   }
 }
@@ -57,7 +63,7 @@ class Agent {
 function setup() {
   createCanvas(innerWidth, innerHeight);
   //angleMode(DEGREES);
-  background(199, 111, 156);
+  background(255);
 
   field = generateField();
 
@@ -125,11 +131,12 @@ function draw() {
         mouseX - agent.position.x,
         mouseY - agent.position.y
       );
-      //toMouse.normalize();
+      toMouse.normalize();
 
       desiredDirection = p5.Vector.lerp(desiredDirection, toMouse, 0.5);
     }
-    // Code borrowed from a website - BEGIN
+    // Code borrowed from a website - END
+
     agent.follow(desiredDirection);
     agent.update();
     agent.checkBorders();

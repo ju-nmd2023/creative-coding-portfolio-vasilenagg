@@ -37,6 +37,11 @@
   {
     "file": "experiments/flow-field-variation-2.js",
     "name": "Flow Field Human Veins (tree)",
-    "description": "For this work, I got inspired by the painting Sunflowers by Van Gogh and built upon the initial flower experiment, adding stems, a vase, and more details such as additional petals, table, etc. I coded it as an experiment based on the flower example that we live coded with Bassima during a lecture."
+    "description": "For this work, I built upon the"
+  },
+  {
+    "file": "experiments/flow-field-variation-3.js",
+    "name": "Flow Field Human Veins (tree)",
+    "description": "For this work, I built upon the"
   }
 ]
