@@ -32,16 +32,16 @@
   {
     "file": "experiments/flow-field-matrix.js",
     "name": "Flow Field number Matrix",
-    "description": "For this work, I built upon the 'Matrix' experiment, creating an actual number matrix. '"
+    "description": "For this work, I built upon the flow field experiment, creating an actual number matrix by exploring things from the p5 referencing I could experiment with. By playing with the angle size, the flow of the field is almost straight and upon completion the numbers paint 'filled' horizontal lines."
   },
   {
     "file": "experiments/flow-field-variation-2.js",
     "name": "Flow Field Human Veins (tree)",
-    "description": "For this work, I built upon the"
+    "description": "For this work, I built upon the initial flow field experiment. By limiting the borders, changing the shapes, agents' flow, and many other manipulations, I managed to achieve the look of 'human veins' (also going by tree) as the flow field initially reminded me of the roots of a tree/human veins."
   },
   {
     "file": "experiments/flow-field-variation-3.js",
     "name": "DIY flow field",
-    "description": "For this work, I built upon the Veins(tree) variation. Enter your mouse on the field and see the magic."
+    "description": "For this work, I built upon the Veins(tree) variation and kind of combined it with the color scheme of the initial flow field. With a little help from AI, I was able to make the flow field 'follow' the mouse. Play with your mouse on the field and see the magic."
   }
 ]
