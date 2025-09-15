@@ -56,7 +56,7 @@ class Agent {
 
 function setup() {
   createCanvas(innerWidth, innerHeight);
-  background(255, 255, 255);
+  background(245, 255, 245);
   field = generateField();
   generateAgents();
 }

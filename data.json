@@ -26,8 +26,8 @@
   },
   {
     "file": "experiments/flow-field-experiment.js",
-    "name": "Flow Field 'Matrix'",
-    "description": "For this work, tried creating a flow field with randomly coloured rectangled. I based the code on the flow field example, experimenting with the numbers until I reached a result which satisfied my vision."
+    "name": "Green Flow Field Vector Art",
+    "description": "For this work, tried creating a flow field with randomly coloured rectangles in the blue-green-brown range. I based the code on the flow field example, experimenting with the numbers until I reached a result which satisfied my vision - for it to resemble green marble vaguely."
   },
   {
     "file": "experiments/flow-field-matrix.js",
