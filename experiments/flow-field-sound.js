@@ -69,7 +69,7 @@ class Agent {
 function setup() {
   createCanvas(innerWidth, innerHeight);
   //angleMode(DEGREES);
-  background(255);
+  background(212, 190, 181);
 
   //synth = new Tone.Synth().toDestination();
 
@@ -155,7 +155,7 @@ function draw() {
 function mousePressed() {
   Tone.start();
 
-  let notes = ["C4", "Db4", "D"];
+  let notes = ["C4", "Db4", "D", "Eb4", "E4", "F4", "Gb4"];
   let note = random(notes);
 
   synth.triggerAttackRelease(note, "4n");
